@@ -1,0 +1,92 @@
+.card {
+  position: absolute;
+  height: 70%;
+  width: 60%;
+  margin-top: 7%;
+  margin-left: 20%;
+  /* border: 2px solid; */
+
+}
+
+.card-header {
+  /* color: white; */
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.card-title {
+  height: 15%;
+}
+
+.trapezoid-left {
+  border-bottom: 3.5vw solid;
+  border-left: 0px solid transparent;
+  border-right: 3vw solid transparent;
+  height: 0;
+  width: 10vw;
+  padding: 0.5vw;
+
+}
+
+.trapezoid-right {
+  border-bottom: 3.5vw solid;
+  border-right: 0px solid transparent;
+  border-left: 3vw solid transparent;
+  height: 0;
+  width: 10vw;
+  padding: 0.5vw;
+}
+
+.dp-container {
+  padding: 0;
+}
+
+.dp {
+  border-radius: 30%;
+  height: 5vw;
+  width: 5vw;
+  border: none;
+  padding: 0.5vw;
+  margin-top: 1%;
+}
+
+.dp-left {
+  position: relative;
+  margin-right: 0;
+  float: right;
+
+}
+
+.dp-right {
+  position: relative;
+  margin-left: 0;
+  float: left;
+}
+
+.table-container {
+  margin-left: 4vw;
+  height: 50%;
+  margin-top: 15%;
+  margin-right: 4.5vw;
+  background-color: rgba(25, 182, 148, 0.638);
+  padding-left: 3.5vw;
+  border-radius: 25px;
+}
+
+.table {
+  position: absolute;
+  height: 10vw;
+  width: 45vw;
+  color: white;
+}
+
+.winning {
+  color: white;
+  padding-top: 7%;
+}
+
+.winning-rounds {
+  font-size: 2vw;
+}

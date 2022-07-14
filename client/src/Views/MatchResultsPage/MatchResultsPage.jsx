@@ -1,9 +1,12 @@
 import React from 'react';
+import MatchCard from './MatchCard';
+import Styles from "./MatchResults.module.css";
+
 
 const MatchResultsPage = () => {
     return (
-        <div>
-            <h1>Match Results Page</h1>
+        <div className={`${Styles['body']}`}>
+           <MatchCard/>
         </div>
     );
 };

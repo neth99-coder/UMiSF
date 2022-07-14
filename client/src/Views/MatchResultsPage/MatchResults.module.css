@@ -1,0 +1,16 @@
+@keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 0 100%;
+    }
+  }
+
+.body {
+  height: 100%;
+  background-image: url("./temp_img/3d_court.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: animatedBackground 30s linear infinite alternate;
+}
