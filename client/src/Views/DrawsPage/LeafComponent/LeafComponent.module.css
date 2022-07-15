@@ -1,0 +1,29 @@
+.node-div{
+    color: white;
+    height: 40px;
+    width: 65px;
+    text-align: center;
+    background-color: black;
+}
+
+.name-tag{
+    font-size: 10px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+
+.row-div{
+    height: 25px;
+}
+
+
+th {
+    text-align: center;
+    width: 65px;
+    height: 20px;
+    background-color: black;
+}
+
+
+
