@@ -46,10 +46,10 @@ export default function AppRouter() {
               path="match-results"
               element={<MatchResultsPage />}
             />
-                                    <Route
+                                    {/* <Route
               path="scheduled-matches"
               element={<MatchSchedulePage />}
-            />
+            /> */}
                                     <Route
               path="photos"
               element={<PhotosPage />}
