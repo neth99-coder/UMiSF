@@ -1,14 +1,14 @@
 import React from "react";
-import Styles from "./MatchCard.module.css";
+import Styles from "./FinishedMatchCard.module.css";
 import player1 from "./temp_img/LeeChongWei.jpg";
 import player2 from "./temp_img/lin_dan.webp";
 import { Table } from "react-bootstrap";
 
-const MatchCard = () => {
+const FinishedMatchCard = () => {
 
     const match = {
         match_id : "123456",
-        player_1 : {player_id : "111", player_name: "Lee Chong Wei", player_dp:player1},
+        player_1 : {player_id : "111", player_name: "Lee C. Wei", player_dp:player1},
         player_2: {player_id : "222", player_name: "Lin Dan", player_dp:player2},
         round_1: {player_1_score: 21, player_2_score: 18},
         round_2: {player_1_score: 21, player_2_score: 15},
@@ -33,20 +33,20 @@ const MatchCard = () => {
           />
         </div>
         <div
-          className={`${Styles["card-title"]} ${Styles["trapezoid-left"]} col`}
+          className={`${Styles["card-title"]} ${Styles["trapezoid-left"]} `}
         >
           <div className={`${Styles["winning"]} text-center `}>
             {" "}
-            <h3 className={`${Styles["winning-rounds"]}`}> {(match["player_1"]["player_id"] === match['winner_id'] )? 2 : (match["number_of_rounds"] === 2)? 0 : 1}</h3>{" "}
+            <h3 className={`${Styles["winning-rounds"]} ${Styles["fadeIn"]}`}> {(match["player_1"]["player_id"] === match['winner_id'] )? 2 : (match["number_of_rounds"] === 2)? 0 : 1}</h3>{" "}
           </div>
         </div>
         <div className={`${Styles["card-title"]} col`}></div>
         <div
-          className={`${Styles["card-title"]} ${Styles["trapezoid-right"]} col`}
+          className={`${Styles["card-title"]} ${Styles["trapezoid-right"]}`}
         >
           <div className={`${Styles["winning"]} text-center `}>
             {" "}
-            <h3 className={`${Styles["winning-rounds"]}`}>{(match["player_2"]["player_id"] === match['winner_id'] )? 2 : (match["number_of_rounds"] === 2)? 0 : 1}</h3>{" "}
+            <h3 className={`${Styles["winning-rounds"]} ${Styles["fadeIn"]}`}>{(match["player_2"]["player_id"] === match['winner_id'] )? 2 : (match["number_of_rounds"] === 2)? 0 : 1}</h3>{" "}
           </div>
         </div>
         <div
@@ -60,7 +60,7 @@ const MatchCard = () => {
         </div>
       </div>
 
-      <div className={`${Styles["table-container"]} row align-items-center`}>
+      <div className={`${Styles["table-container"]} ${Styles["fadeIn"]} row align-items-center`}>
         <Table size="sm" className={`${Styles["table"]} text-center`}>
           <thead>
             <tr>
@@ -93,4 +93,4 @@ const MatchCard = () => {
   );
 };
 
-export default MatchCard;
+export default FinishedMatchCard;

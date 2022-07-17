@@ -1,16 +1,30 @@
-@keyframes animatedBackground {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: 0 100%;
-    }
-  }
-
 .body {
-  height: 100%;
-  background-image: url("./temp_img/3d_court.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: animatedBackground 30s linear infinite alternate;
+  /* height: 100%; */
+  margin-left: 5%;
+
+}
+
+.match-result-table{
+  padding: 30px;
+  display: block;
+  overflow: auto;
+  margin: 1%;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.header{
+  /* position: absolute; */
+  height: 100px;
+}
+
+.dopdown-container{
+  position: absolute;
+  height: 50px;
+  margin-left: 50%;
+
+}
+
+.dropdown-menu{
+  
 }
