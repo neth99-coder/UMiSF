@@ -7,7 +7,7 @@ const ResultRow = (props) => {
         className={`${Styles["row"]} row border border-3 border-top border-light`}
         //   id = {employee.emp_id}
       >
-        <div className="col-3 text-center ">
+        <div className="col-3 text-center d-none d-md-block">
             <div className='' style={{height: "30px", }}>{props.match.age_group}</div>
             <div className='' style={{height: "30px",  }}>{props.match.type}</div>
             </div>

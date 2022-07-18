@@ -1,21 +1,44 @@
 import React from "react";
 //import FinishedMatchCard from './FinishedMatchCard';
 import ResultRow from "./ResultRow";
-import Styles from "./MatchResults.module.css";
+import Styles from "./MatchResultsPage.module.css";
 import player1 from "./temp_img/LeeChongWei.jpg";
 import player2 from "./temp_img/lin_dan.webp";
 import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
+import OngoingMatchcard from "./OngoingMatchcard";
+import {Link} from "react-router-dom";
 
 const MatchResultsPage = () => {
-  const [matchFilter, setMatchFilter] = useState("Select Filter");
   const [finishedMatches, setFinishedMatches] = useState([
     {
       match_id: "123456",
-      age_group: "Open",
-      type: "Mens' single",
+      age_group: "U: 9",
+      type: "Boys' single",
       time: "10:00 AM",
-      date: "2022-07-15",
+      date: "2022-01-01",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 15, player_2_score: 21 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 21, player_2_score: 19 },
+      number_of_rounds: 3,
+      winner_id: "111",
+    },
+    {
+      match_id: "123456",
+      age_group: "U: 11",
+      type: "Girls' single",
+      time: "10:00 AM",
+      date: "2022-01-01",
       player_1: {
         player_id: "111",
         player_name: "Lee C. Wei",
@@ -34,10 +57,10 @@ const MatchResultsPage = () => {
     },
     {
       match_id: "123456",
-      age_group: "Open",
-      type: "Mens' single",
+      age_group: "U: 13",
+      type: "Boys' double",
       time: "10:00 AM",
-      date: "2022-07-15",
+      date: "2022-01-02",
       player_1: {
         player_id: "111",
         player_name: "Lee C. Wei",
@@ -56,10 +79,10 @@ const MatchResultsPage = () => {
     },
     {
       match_id: "123456",
-      age_group: "Open",
-      type: "Mens' single",
+      age_group: "U: 15",
+      type: "Girls' double",
       time: "10:00 AM",
-      date: "2022-07-15",
+      date: "2022-01-02",
       player_1: {
         player_id: "111",
         player_name: "Lee C. Wei",
@@ -78,10 +101,10 @@ const MatchResultsPage = () => {
     },
     {
       match_id: "123456",
-      age_group: "Open",
-      type: "Mens' single",
+      age_group: "U: 17",
+      type: "Boys' single",
       time: "10:00 AM",
-      date: "2022-07-15",
+      date: "2022-01-03",
       player_1: {
         player_id: "111",
         player_name: "Lee C. Wei",
@@ -100,10 +123,10 @@ const MatchResultsPage = () => {
     },
     {
       match_id: "123456",
-      age_group: "Open",
-      type: "Mens' single",
+      age_group: "-",
+      type: "Staff",
       time: "10:00 AM",
-      date: "2022-07-15",
+      date: "2022-01-03",
       player_1: {
         player_id: "111",
         player_name: "Lee C. Wei",
@@ -122,10 +145,76 @@ const MatchResultsPage = () => {
     },
     {
       match_id: "123456",
-      age_group: "Open",
-      type: "Mens' single",
+      age_group: "-",
+      type: "University",
       time: "10:00 AM",
-      date: "2022-07-15",
+      date: "2022-01-03",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
+    },
+    {
+      match_id: "123456",
+      age_group: "U: 19",
+      type: "Boys' single",
+      time: "10:00 AM",
+      date: "2022-01-03",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
+    },
+    {
+      match_id: "123456",
+      age_group: "U: 9",
+      type: "Girls' single",
+      time: "10:00 AM",
+      date: "2022-01-03",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
+    },
+    {
+      match_id: "123456",
+      age_group: "-",
+      type: "University",
+      time: "10:00 AM",
+      date: "2022-01-03",
       player_1: {
         player_id: "111",
         player_name: "Lee C. Wei",
@@ -144,43 +233,394 @@ const MatchResultsPage = () => {
     },
   ]);
 
-  function handleFilter() {}
+  const [ongoingMatches, setOngoingMatches] = useState([  {
+    match_id: "123456",
+    age_group: "U: 9",
+    type: "Boys' single",
+    time: "10:00 AM",
+    date: "2022-01-01",
+    player_1: {
+      player_id: "111",
+      player_name: "Lee C. Wei",
+      player_dp: player1,
+    },
+    player_2: {
+      player_id: "222",
+      player_name: "Lin Dan",
+      player_dp: player2,
+    },
+    round_1: { player_1_score: 21, player_2_score: 18 },
+    round_2: { player_1_score: 21, player_2_score: 15 },
+    round_3: { player_1_score: 0, player_2_score: 0 },
+    number_of_rounds: 2,
+    winner_id: "111",
+  },
+  {
+    match_id: "123456",
+    age_group: "U: 11",
+    type: "Girls' single",
+    time: "10:00 AM",
+    date: "2022-01-01",
+    player_1: {
+      player_id: "111",
+      player_name: "Lee C. Wei",
+      player_dp: player1,
+    },
+    player_2: {
+      player_id: "222",
+      player_name: "Lin Dan",
+      player_dp: player2,
+    },
+    round_1: { player_1_score: 21, player_2_score: 18 },
+    round_2: { player_1_score: 21, player_2_score: 15 },
+    round_3: { player_1_score: 0, player_2_score: 0 },
+    number_of_rounds: 2,
+    winner_id: "111",
+  },
+  {
+    match_id: "123456",
+    age_group: "U: 13",
+    type: "Boys' double",
+    time: "10:00 AM",
+    date: "2022-01-02",
+    player_1: {
+      player_id: "111",
+      player_name: "Lee C. Wei",
+      player_dp: player1,
+    },
+    player_2: {
+      player_id: "222",
+      player_name: "Lin Dan",
+      player_dp: player2,
+    },
+    round_1: { player_1_score: 21, player_2_score: 18 },
+    round_2: { player_1_score: 21, player_2_score: 15 },
+    round_3: { player_1_score: 0, player_2_score: 0 },
+    number_of_rounds: 2,
+    winner_id: "111",
+  },
+  {
+    match_id: "123456",
+    age_group: "U: 15",
+    type: "Girls' double",
+    time: "10:00 AM",
+    date: "2022-01-02",
+    player_1: {
+      player_id: "111",
+      player_name: "Lee C. Wei",
+      player_dp: player1,
+    },
+    player_2: {
+      player_id: "222",
+      player_name: "Lin Dan",
+      player_dp: player2,
+    },
+    round_1: { player_1_score: 21, player_2_score: 18 },
+    round_2: { player_1_score: 21, player_2_score: 15 },
+    round_3: { player_1_score: 0, player_2_score: 0 },
+    number_of_rounds: 2,
+    winner_id: "111",
+  },
+  {
+    match_id: "123456",
+    age_group: "U: 17",
+    type: "Boys' single",
+    time: "10:00 AM",
+    date: "2022-01-03",
+    player_1: {
+      player_id: "111",
+      player_name: "Lee C. Wei",
+      player_dp: player1,
+    },
+    player_2: {
+      player_id: "222",
+      player_name: "Lin Dan",
+      player_dp: player2,
+    },
+    round_1: { player_1_score: 21, player_2_score: 18 },
+    round_2: { player_1_score: 21, player_2_score: 15 },
+    round_3: { player_1_score: 0, player_2_score: 0 },
+    number_of_rounds: 2,
+    winner_id: "111",
+  },
+  {
+    match_id: "123456",
+    age_group: "-",
+    type: "Staff",
+    time: "10:00 AM",
+    date: "2022-01-03",
+    player_1: {
+      player_id: "111",
+      player_name: "Lee C. Wei",
+      player_dp: player1,
+    },
+    player_2: {
+      player_id: "222",
+      player_name: "Lin Dan",
+      player_dp: player2,
+    },
+    round_1: { player_1_score: 21, player_2_score: 18 },
+    round_2: { player_1_score: 21, player_2_score: 15 },
+    round_3: { player_1_score: 0, player_2_score: 0 },
+    number_of_rounds: 2,
+    winner_id: "111",
+  },
+  {
+    match_id: "123456",
+    age_group: "-",
+    type: "University",
+    time: "10:00 AM",
+    date: "2022-01-03",
+    player_1: {
+      player_id: "111",
+      player_name: "Lee C. Wei",
+      player_dp: player1,
+    },
+    player_2: {
+      player_id: "222",
+      player_name: "Lin Dan",
+      player_dp: player2,
+    },
+    round_1: { player_1_score: 21, player_2_score: 18 },
+    round_2: { player_1_score: 21, player_2_score: 15 },
+    round_3: { player_1_score: 0, player_2_score: 0 },
+    number_of_rounds: 2,
+    winner_id: "111",
+  },]);
+
+  const ages = ["U: 9", "U: 11", "U: 13", "U: 15", "U: 17", "U: 19"];
+  const types = [
+    "Boys' single",
+    "Girls' single",
+    "Boys' double",
+    "Girls' double",
+    "Staff",
+    "University",
+  ];
+  const dates = ["2022-01-01", "2022-01-02", "2022-01-03", "2022-01-03"];
+
+  const [tempFinishedMatches, setTempFinishedMtches] =
+    useState(finishedMatches);
+  const [ageFilter, setAgeFilter] = useState("Age");
+  const [typeFilter, setTypeFilter] = useState("Type");
+  const [dateFilter, setDateFilter] = useState("Date");
+
+  const [filterdAges, setFilteredAges] = useState([]);
+  const [filterdTypes, setFilteredTypes] = useState(finishedMatches);
+  const [filterdDates, setFilteredDates] = useState([]);
+
+
+  function handleAgeFilter(e) {
+    const id = parseInt(e.target.id);
+    var tempArray = finishedMatches;
+    tempArray =
+      typeFilter !== "All" && typeFilter !== "Type"
+        ? tempArray.filter((match) => {
+            return match.type === typeFilter;
+          })
+        : tempArray;
+    // console.log(tempArray);
+    tempArray =
+      dateFilter !== "All" && dateFilter !== "Date" 
+        ? tempArray.filter((match) => {
+            return match.date === dateFilter;
+          })
+        : tempArray;
+    // console.log(tempArray);
+    id >= 0 ? setAgeFilter(ages[id]) : setAgeFilter("All");
+    if (id >= 0) {
+      tempArray = tempArray.filter((match) => {
+        return match.age_group === ages[id];
+      });
+    }
+    //console.log(tempArray);
+    setTempFinishedMtches(tempArray);
+    //console.log(tempArray);
+  }
+
+  function handleTypeFilter(e) {
+    const id = parseInt(e.target.id);
+    var tempArray = finishedMatches;
+    
+    //console.log(tempArray);
+    tempArray =
+      ageFilter !== "All" && ageFilter !== "Age"
+        ? tempArray.filter((match) => {
+            return match.age_group === ageFilter;
+          })
+        : tempArray;
+    //console.log(tempArray);
+    tempArray =
+      dateFilter !== "All" && dateFilter !== "Date"
+        ? tempArray.filter((match) => {
+            return match.date === dateFilter;
+          })
+        : tempArray;
+    //console.log(tempArray);
+    id >= 0 ? setTypeFilter(types[id]) : setTypeFilter("All");
+    if (id >= 0) {
+      tempArray = tempArray.filter((match) => {
+        return match.type === types[id];
+      });
+    }
+    //console.log(tempArray);
+    setTempFinishedMtches(tempArray);
+    //console.log(tempArray);
+  }
+
+  function handleDateFilter(e){
+    const id = parseInt(e.target.id);
+    var tempArray = finishedMatches;
+    //console.log(tempArray);
+    tempArray =
+      ageFilter !== "All" && ageFilter !== "Age"
+        ? tempArray.filter((match) => {
+            return match.age_group === ageFilter;
+          })
+        : tempArray;
+    //console.log(tempArray);
+    tempArray =
+      typeFilter !== "All" && typeFilter !== "Type"
+        ? tempArray.filter((match) => {
+            return match.type === typeFilter;
+          })
+        : tempArray;
+    //console.log(tempArray);
+    id >= 0 ? setDateFilter(dates[id]) : setDateFilter("All");
+    if (id >= 0) {
+      
+      tempArray = tempArray.filter((match) => {
+        return match.date === dates[id];
+      });
+    }
+    
+   // console.log(tempArray);
+    setTempFinishedMtches(tempArray);
+    //console.log(tempArray);   
+  }
 
   return (
-    <div className={`${Styles["body"]}`}>
-      <div className="row">
+    <div className={`${Styles["body"]} row`}>
+      <div className={`${Styles["finished-match-result-section"]} col-9`}>
         <div
-          className={`${Styles["match-result-table"]} col-9 border border-3 border-top border-light`}
+          className={`${Styles["match-result-table"]} border border-3 border-top border-light`}
         >
           <div className={`${Styles["header"]} row`}>
-            <div>
+            <div className={`${Styles["title"]} col-5`}>
               <h3>Match results</h3>
             </div>
-            <div className={`${Styles["dopdown-container"]} `}>
-              <Dropdown>
-                <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                  <span>{matchFilter}</span>
-                </Dropdown.Toggle>
+            <div className="col-6">
+              <div className={`row`}>
+                <Dropdown className={`${Styles["select-container"]} col-auto`}>
+                  <Dropdown.Toggle
+                    variant="primary"
+                    id="dropdown-basic"
+                    className={`${Styles["select-btn"]}`}
+                  >
+                    <span>{ageFilter}</span>
+                  </Dropdown.Toggle>
 
-                <Dropdown.Menu className={`${Styles["dopdown-menu"]} `}>
-                  <Dropdown.Item onClick={handleFilter} name="All" id="0">
-                    All
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={handleFilter} name="All" id="1">
-                    Date
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+                  <Dropdown.Menu className={`${Styles["select-menu"]}`}>
+                    <Dropdown.Item onClick={handleAgeFilter} name="age" id="-1">
+                      All
+                    </Dropdown.Item>
+
+                    {ages?.map((age, index) => {
+                      return (
+                        <Dropdown.Item
+                          onClick={handleAgeFilter}
+                          name="age"
+                          id={index}
+                        >
+                          {age}
+                        </Dropdown.Item>
+                      );
+                    })}
+                  </Dropdown.Menu>
+                </Dropdown>
+                <Dropdown className={`${Styles["select-container"]} col-auto`}>
+                  <Dropdown.Toggle
+                    variant="primary"
+                    id="dropdown-basic"
+                    className={`${Styles["select-btn"]}`}
+                  >
+                    <span>{typeFilter}</span>
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu className={`${Styles["select-menu"]}`}>
+                    <Dropdown.Item
+                      onClick={handleTypeFilter}
+                      name="type"
+                      id="-1"
+                    >
+                      All
+                    </Dropdown.Item>
+                    {types?.map((type, index) => {
+                      return (
+                        <Dropdown.Item
+                          onClick={handleTypeFilter}
+                          name="type"
+                          id={index}
+                        >
+                          {type}
+                        </Dropdown.Item>
+                      );
+                    })}
+                  </Dropdown.Menu>
+                </Dropdown>
+
+                <Dropdown className={`${Styles["select-container"]} col-auto`}>
+                  <Dropdown.Toggle
+                    variant="primary"
+                    id="dropdown-basic"
+                    className={`${Styles["select-btn"]}`}
+                  >
+                    <span>{dateFilter}</span>
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu className={`${Styles["select-menu"]}`}>
+                    <Dropdown.Item onClick={handleDateFilter} name="date" id="-1">
+                      All
+                    </Dropdown.Item>
+
+                    {dates?.map((date, index) => {
+                      return (
+                        <Dropdown.Item
+                          onClick={handleDateFilter}
+                          name="date"
+                          id={index}
+                        >
+                          {date}
+                        </Dropdown.Item>
+                      );
+                    })}
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
             </div>
           </div>
 
           <div>
-            {finishedMatches?.map((match, index) => {
-              return <ResultRow match={match} key={index} />;
+            {tempFinishedMatches?.map((match, index) => {
+              return                     <Link
+              to={`../match-result/${match.match_id}`}
+              state={{ obj: match }}
+              key={index}
+              style={{ textDecoration: "none", color: "black" }}
+              
+            >
+            <ResultRow  key={index} match={match}/>
+            </Link>
             })}
           </div>
         </div>
-        <div className="col-2"></div>
+      </div>
+
+      <div className={`${Styles["ongoing-match-result-section"]} col`}>
+        Ongoing matches
+       {ongoingMatches?.map((match, index)=>{
+          return <OngoingMatchcard match={match} key={index}/>
+       })}
       </div>
     </div>
   );
