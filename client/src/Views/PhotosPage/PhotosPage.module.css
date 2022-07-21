@@ -1,0 +1,12 @@
+.body{
+    height: 100%;
+    width: 100%;
+
+}
+
+.title{
+    height: 10%;
+    position: relative;
+    text-align: center;
+    padding-top: 2px;
+}

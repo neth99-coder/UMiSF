@@ -7,7 +7,7 @@ import player2 from "./temp_img/lin_dan.webp";
 import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import OngoingMatchcard from "./OngoingMatchcard";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MatchResultsPage = () => {
   const [finishedMatches, setFinishedMatches] = useState([
@@ -233,160 +233,162 @@ const MatchResultsPage = () => {
     },
   ]);
 
-  const [ongoingMatches, setOngoingMatches] = useState([  {
-    match_id: "123456",
-    age_group: "U: 9",
-    type: "Boys' single",
-    time: "10:00 AM",
-    date: "2022-01-01",
-    player_1: {
-      player_id: "111",
-      player_name: "Lee C. Wei",
-      player_dp: player1,
+  const [ongoingMatches, setOngoingMatches] = useState([
+    {
+      match_id: "123456",
+      age_group: "U: 9",
+      type: "Boys' single",
+      time: "10:00 AM",
+      date: "2022-01-01",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
     },
-    player_2: {
-      player_id: "222",
-      player_name: "Lin Dan",
-      player_dp: player2,
+    {
+      match_id: "123456",
+      age_group: "U: 11",
+      type: "Girls' single",
+      time: "10:00 AM",
+      date: "2022-01-01",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
     },
-    round_1: { player_1_score: 21, player_2_score: 18 },
-    round_2: { player_1_score: 21, player_2_score: 15 },
-    round_3: { player_1_score: 0, player_2_score: 0 },
-    number_of_rounds: 2,
-    winner_id: "111",
-  },
-  {
-    match_id: "123456",
-    age_group: "U: 11",
-    type: "Girls' single",
-    time: "10:00 AM",
-    date: "2022-01-01",
-    player_1: {
-      player_id: "111",
-      player_name: "Lee C. Wei",
-      player_dp: player1,
+    {
+      match_id: "123456",
+      age_group: "U: 13",
+      type: "Boys' double",
+      time: "10:00 AM",
+      date: "2022-01-02",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
     },
-    player_2: {
-      player_id: "222",
-      player_name: "Lin Dan",
-      player_dp: player2,
+    {
+      match_id: "123456",
+      age_group: "U: 15",
+      type: "Girls' double",
+      time: "10:00 AM",
+      date: "2022-01-02",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
     },
-    round_1: { player_1_score: 21, player_2_score: 18 },
-    round_2: { player_1_score: 21, player_2_score: 15 },
-    round_3: { player_1_score: 0, player_2_score: 0 },
-    number_of_rounds: 2,
-    winner_id: "111",
-  },
-  {
-    match_id: "123456",
-    age_group: "U: 13",
-    type: "Boys' double",
-    time: "10:00 AM",
-    date: "2022-01-02",
-    player_1: {
-      player_id: "111",
-      player_name: "Lee C. Wei",
-      player_dp: player1,
+    {
+      match_id: "123456",
+      age_group: "U: 17",
+      type: "Boys' single",
+      time: "10:00 AM",
+      date: "2022-01-03",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
     },
-    player_2: {
-      player_id: "222",
-      player_name: "Lin Dan",
-      player_dp: player2,
+    {
+      match_id: "123456",
+      age_group: "-",
+      type: "Staff",
+      time: "10:00 AM",
+      date: "2022-01-03",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
     },
-    round_1: { player_1_score: 21, player_2_score: 18 },
-    round_2: { player_1_score: 21, player_2_score: 15 },
-    round_3: { player_1_score: 0, player_2_score: 0 },
-    number_of_rounds: 2,
-    winner_id: "111",
-  },
-  {
-    match_id: "123456",
-    age_group: "U: 15",
-    type: "Girls' double",
-    time: "10:00 AM",
-    date: "2022-01-02",
-    player_1: {
-      player_id: "111",
-      player_name: "Lee C. Wei",
-      player_dp: player1,
+    {
+      match_id: "123456",
+      age_group: "-",
+      type: "University",
+      time: "10:00 AM",
+      date: "2022-01-03",
+      player_1: {
+        player_id: "111",
+        player_name: "Lee C. Wei",
+        player_dp: player1,
+      },
+      player_2: {
+        player_id: "222",
+        player_name: "Lin Dan",
+        player_dp: player2,
+      },
+      round_1: { player_1_score: 21, player_2_score: 18 },
+      round_2: { player_1_score: 21, player_2_score: 15 },
+      round_3: { player_1_score: 0, player_2_score: 0 },
+      number_of_rounds: 2,
+      winner_id: "111",
     },
-    player_2: {
-      player_id: "222",
-      player_name: "Lin Dan",
-      player_dp: player2,
-    },
-    round_1: { player_1_score: 21, player_2_score: 18 },
-    round_2: { player_1_score: 21, player_2_score: 15 },
-    round_3: { player_1_score: 0, player_2_score: 0 },
-    number_of_rounds: 2,
-    winner_id: "111",
-  },
-  {
-    match_id: "123456",
-    age_group: "U: 17",
-    type: "Boys' single",
-    time: "10:00 AM",
-    date: "2022-01-03",
-    player_1: {
-      player_id: "111",
-      player_name: "Lee C. Wei",
-      player_dp: player1,
-    },
-    player_2: {
-      player_id: "222",
-      player_name: "Lin Dan",
-      player_dp: player2,
-    },
-    round_1: { player_1_score: 21, player_2_score: 18 },
-    round_2: { player_1_score: 21, player_2_score: 15 },
-    round_3: { player_1_score: 0, player_2_score: 0 },
-    number_of_rounds: 2,
-    winner_id: "111",
-  },
-  {
-    match_id: "123456",
-    age_group: "-",
-    type: "Staff",
-    time: "10:00 AM",
-    date: "2022-01-03",
-    player_1: {
-      player_id: "111",
-      player_name: "Lee C. Wei",
-      player_dp: player1,
-    },
-    player_2: {
-      player_id: "222",
-      player_name: "Lin Dan",
-      player_dp: player2,
-    },
-    round_1: { player_1_score: 21, player_2_score: 18 },
-    round_2: { player_1_score: 21, player_2_score: 15 },
-    round_3: { player_1_score: 0, player_2_score: 0 },
-    number_of_rounds: 2,
-    winner_id: "111",
-  },
-  {
-    match_id: "123456",
-    age_group: "-",
-    type: "University",
-    time: "10:00 AM",
-    date: "2022-01-03",
-    player_1: {
-      player_id: "111",
-      player_name: "Lee C. Wei",
-      player_dp: player1,
-    },
-    player_2: {
-      player_id: "222",
-      player_name: "Lin Dan",
-      player_dp: player2,
-    },
-    round_1: { player_1_score: 21, player_2_score: 18 },
-    round_2: { player_1_score: 21, player_2_score: 15 },
-    round_3: { player_1_score: 0, player_2_score: 0 },
-    number_of_rounds: 2,
-    winner_id: "111",
-  },]);
+  ]);
 
   const ages = ["U: 9", "U: 11", "U: 13", "U: 15", "U: 17", "U: 19"];
   const types = [
@@ -409,7 +411,6 @@ const MatchResultsPage = () => {
   const [filterdTypes, setFilteredTypes] = useState(finishedMatches);
   const [filterdDates, setFilteredDates] = useState([]);
 
-
   function handleAgeFilter(e) {
     const id = parseInt(e.target.id);
     var tempArray = finishedMatches;
@@ -421,7 +422,7 @@ const MatchResultsPage = () => {
         : tempArray;
     // console.log(tempArray);
     tempArray =
-      dateFilter !== "All" && dateFilter !== "Date" 
+      dateFilter !== "All" && dateFilter !== "Date"
         ? tempArray.filter((match) => {
             return match.date === dateFilter;
           })
@@ -441,7 +442,7 @@ const MatchResultsPage = () => {
   function handleTypeFilter(e) {
     const id = parseInt(e.target.id);
     var tempArray = finishedMatches;
-    
+
     //console.log(tempArray);
     tempArray =
       ageFilter !== "All" && ageFilter !== "Age"
@@ -468,7 +469,7 @@ const MatchResultsPage = () => {
     //console.log(tempArray);
   }
 
-  function handleDateFilter(e){
+  function handleDateFilter(e) {
     const id = parseInt(e.target.id);
     var tempArray = finishedMatches;
     //console.log(tempArray);
@@ -488,15 +489,14 @@ const MatchResultsPage = () => {
     //console.log(tempArray);
     id >= 0 ? setDateFilter(dates[id]) : setDateFilter("All");
     if (id >= 0) {
-      
       tempArray = tempArray.filter((match) => {
         return match.date === dates[id];
       });
     }
-    
-   // console.log(tempArray);
+
+    // console.log(tempArray);
     setTempFinishedMtches(tempArray);
-    //console.log(tempArray);   
+    //console.log(tempArray);
   }
 
   return (
@@ -579,7 +579,11 @@ const MatchResultsPage = () => {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className={`${Styles["select-menu"]}`}>
-                    <Dropdown.Item onClick={handleDateFilter} name="date" id="-1">
+                    <Dropdown.Item
+                      onClick={handleDateFilter}
+                      name="date"
+                      id="-1"
+                    >
                       All
                     </Dropdown.Item>
 
@@ -602,15 +606,16 @@ const MatchResultsPage = () => {
 
           <div>
             {tempFinishedMatches?.map((match, index) => {
-              return                     <Link
-              to={`../match-result/${match.match_id}`}
-              state={{ obj: match }}
-              key={index}
-              style={{ textDecoration: "none", color: "black" }}
-              
-            >
-            <ResultRow  key={index} match={match}/>
-            </Link>
+              return (
+                <Link
+                  to={`../match-result/${match.match_id}`}
+                  state={{ obj: match }}
+                  key={index}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <ResultRow key={index} match={match} />
+                </Link>
+              );
             })}
           </div>
         </div>
@@ -618,9 +623,9 @@ const MatchResultsPage = () => {
 
       <div className={`${Styles["ongoing-match-result-section"]} col`}>
         Ongoing matches
-       {ongoingMatches?.map((match, index)=>{
-          return <OngoingMatchcard match={match} key={index}/>
-       })}
+        {ongoingMatches?.map((match, index) => {
+          return <OngoingMatchcard match={match} key={index} />;
+        })}
       </div>
     </div>
   );
