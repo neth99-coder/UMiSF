@@ -17,16 +17,16 @@ const GalleryPage = () => {
   ]);
 
   const [photos, setPhotos] = useState([
-    "./Images/TempImg/1.jpg",
-    "./Images/TempImg/2.jpg",
-    "./Images/TempImg/3.jpg",
-    "./Images/TempImg/4.jpg",
-    "./Images/TempImg/5.jpg",
-    "./Images/TempImg/6.jpg",
-    "./Images/TempImg/7.jpg",
-    "./Images/TempImg/8.jpg",
-    "./Images/TempImg/9.jpg",
-    "./Images/TempImg/10.jpg",
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg",
+    "9.jpg",
+    "10.jpg",
   ]);
 
   return (
@@ -62,7 +62,7 @@ const GalleryPage = () => {
 
         <div className={`${Styles["gallery-content"]} `}>
           {titles?.map((title, index) => {
-            return <AlbumCard key={index} title={title} />;
+            return <AlbumCard key={index} title={title} photos={photos}/>;
           })}
         </div>
       </div>
