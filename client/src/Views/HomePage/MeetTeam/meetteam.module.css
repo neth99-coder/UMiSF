@@ -1,0 +1,35 @@
+.team{
+    height:80vh;
+    width: 100%;
+    padding: 1vw;
+}
+
+.team-title{
+    width:100%;
+    text-transform: uppercase;
+    margin:1vw
+}
+
+.team-title span{
+    font-family: 'roboto';
+    font-size: 3vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(9, 132, 227,0.2);
+    width: 100%;
+}
+
+.group-photo img{
+    height:78vh;
+    object-fit: scale-down;
+}
+.captains,.vice-captains{
+    display:inline-flex;
+}
+
+.member{
+    margin: 1vw 2vw;
+}
