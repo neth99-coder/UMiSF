@@ -1,5 +1,5 @@
 .team{
-    height:80vh;
+    height:50vw;
     width: 100%;
     padding: 1vw;
 }
@@ -12,7 +12,7 @@
 
 .team-title span{
     font-family: 'roboto';
-    font-size: 3vw;
+    font-size: 40px;
 }
 
 .container{
@@ -23,13 +23,49 @@
 }
 
 .group-photo img{
-    height:78vh;
+    height:40vw;
     object-fit: scale-down;
 }
+
 .captains,.vice-captains{
     display:inline-flex;
 }
 
 .member{
-    margin: 1vw 2vw;
+    margin: 1vw 1.7vw;
+}
+
+@media screen and (max-width:600px){
+    .team{
+        height:140vw;
+    }
+
+    .container{
+        display: block;
+    }
+   
+
+    .group-photo img{
+        height:65vw;
+        object-fit: scale-down;
+    }
+
+    .member{
+        margin: 1vw 9.5vw;
+    }
+}
+@media screen and (max-width:425px){
+
+    .team{
+        height:150vw;
+    }
+
+    .captain-contaier{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .member{
+        margin: 1vw 9.5vw;
+    }
 }
