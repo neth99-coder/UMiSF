@@ -6,6 +6,15 @@
     background-color: black;
 }
 
+.match-div{
+    color: white;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    background-color: black;
+    margin-right: 10px;
+}
+
 .name-tag{
     font-size: 10px;
     height: 20px;
@@ -22,7 +31,81 @@ th {
     text-align: center;
     width: 65px;
     height: 20px;
+}
+
+
+.row-div-match{
+    height: 25px;
+}
+
+.result-tag{
+    font-size: 10px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.score-tag{
+    font-size: 10px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+td{
+    border-left: red 1px solid;
+}
+
+.modal-heading{
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-heading-name{
+    font-weight: bold;
+    text-align: center;
     background-color: black;
+    color: white;
+    border-radius: 15px;
+
+
+}
+
+.modal-heading-vs{
+    font-weight: bold;
+    text-align: center;
+    background-color: #5e5d5d;
+    color: white;
+}
+
+.cropped1 {
+    object-fit: cover;
+    border: 5px solid black;
+}
+
+.center-black{
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+}
+
+.center{
+    margin: auto;
+    text-align: center;
+}
+
+.center-ash{
+    margin: auto;
+    text-align: center;
+    background-color: #5e5d5d;
+    border-radius: 10px;
+    color: white;
+}
+
+.modal-body{
+    background-image: url("../bg.jpg");
+    width: 100%;
+    height: auto;
 }
 
 

@@ -1,0 +1,17 @@
+.header-div{
+    color: blue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.draw-div{
+    background-color: #5e5d5d;
+}
+
+.match-type{
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+}

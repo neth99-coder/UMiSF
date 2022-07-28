@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TournamentBoard} from "react-tournament-board";
 import 'react-tournament-board/style.css';
 import Leaf from "./LeafComponent/LeafComponent";
-import MatchResult from "./MatchResultComponent/MatchResultComponent";
+import style from './DrawsPage.module.css';
+import {Form, FormGroup, InputGroup, Modal, ModalBody, ModalHeader, Table} from "react-bootstrap";
 
 function DrawsPage(props){
+
+
+    function handleInputChange(){
+
+    }
 
     function getDrawSize(n){
         const answer = parseInt(Math.log2(n));
@@ -70,47 +76,74 @@ function DrawsPage(props){
         }
     }
 
-    console.log(JSON.stringify(completedMatches))
-
 
 
 
 
 
     return (
-        <div className="container">
-            <TournamentBoard
+        <div className={style['draw-div']}>
+            <div className="container">
 
-                competitor={competitors}
+                <div className={style['header-div']}>
+                    <h1>UMiSF 2022 </h1>
+                    <h2>18 May - 10 August</h2>
+                    <hr className={style['header-dr']}/>
+                </div>
 
-                matches={completedMatches}
+                <div className={style['match-type']}>
+                    <h1 className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">MATCH SCHEDULE</h1>
+                    <Form>
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <FormGroup>
+                                <label htmlFor="matchType">
+                                    Match Type
+                                </label>
+                                <select
+                                    id="matchType"
+                                    name="matchType"
+                                    placeholder="Select Match Type"
+                                    required={true}
+                                    value=''
+                                    onChange={handleInputChange}
+                                >
+                                    <option>Hello</option>
+                                </select>
+                            </FormGroup>
+                        </div>
+                    </Form>
+                </div>
 
-                nodeRenderer={(props) =>
-                    // <div>{props.isLeaf && props.competitor.name}</div>
-                    <Leaf isLeaf={props.isLeaf} competitor={props.competitor}/>
 
-                }
 
-                // matchingResultRenderer={(props)=>
-                //     <MatchResult />
-                // }
+                <div className="row">
+                    <h1>$Sample_Tournament - Draw</h1>
+                </div>
 
-                treeLinksLayerProps={{
-                    stroke: 'silver',
-                    strokeWidth: 2,
-                }}
+                <TournamentBoard
+                    competitor={competitors}
+                    matches={completedMatches}
 
-                winnerLinksLayerProps={{
-                    stroke: '#4DEA2CFF',
-                    strokeWidth: 4,
-                }}
+                    nodeRenderer={(props) =>
+                        <Leaf isLeaf={props.isLeaf} competitor={props.competitor} p={props.children}/>
+                    }
 
-                direction="vertical"
-                leafDistance={75}
-                leafPadding={50}
+                    treeLinksLayerProps={{
+                        stroke: 'silver',
+                        strokeWidth: 2,
+                    }}
 
-            />
+                    winnerLinksLayerProps={{
+                        stroke: '#4DEA2CFF',
+                        strokeWidth: 4,
+                    }}
 
+                    direction="vertical"
+                    leafDistance={75}
+                    leafPadding={50}
+                />
+
+            </div>
         </div>
     );
 };
